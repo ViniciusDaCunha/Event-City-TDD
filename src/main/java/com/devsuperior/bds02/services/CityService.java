@@ -1,6 +1,7 @@
 package com.devsuperior.bds02.services;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,13 @@ import com.devsuperior.bds02.services.exceptions.DataBaseException;
 import com.devsuperior.bds02.services.exceptions.ResourcesNotFoundException;
 
 
+
 @Service
 public class CityService {
 
 	@Autowired
 	private CityRepository repository;
+	
 	
 	@Transactional(readOnly = true) 
 	public List<CityDTO> findAll(){
