@@ -40,6 +40,12 @@ public class CityService {
 		return new CityDTO(entity);
 	}
 	
+	
+	
+	/**
+	 * Professor, o teste do delete não está passando, algo com o DataBaseException
+	 * mas não consegui idenficar o que é.
+	 */
 	public void delete(Long id) {
 		try {
 			repository.deleteById(id);
